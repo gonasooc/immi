@@ -1,0 +1,6 @@
+/* =================== main =================== */
+.l-center {
+  @include mobile {
+    padding: 0 15px;
+  }
+}

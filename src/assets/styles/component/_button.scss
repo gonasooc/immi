@@ -1,0 +1,217 @@
+/* =================== button =================== */
+
+@mixin btn-default {
+  // 버튼 스타일 초기화 믹스인
+  @include input-reset;
+
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn {
+  @include bg-op($s: auto);
+  @include btn-default;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:disabled {
+    background-color: #dbdbdb;
+
+    &:hover {
+      background-color: #DBDBDB;
+    }
+
+    &:active {
+      background-color: #DBDBDB;
+    }
+  }
+
+  .small {
+    font-size: 90%;
+  }
+}
+
+.btn-grp {
+  @include flex {
+    @include flex-op(center, flex-start);
+  }
+
+  // padding: 5px 0;
+}
+
+// 아이콘 버튼
+.btn-icon {
+  @include input-reset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 버튼의 클래스명 작성은 <컬러 - 모양 - 높이> 순서로 한다. 
+   ex: class="btn-solid btn-rounded btn-xsm" */
+
+/* ----------------- 1. 컬러 ----------------- */
+
+.btn-primary {
+  background-color: color(primary);
+  color: #fff;
+
+  &:hover {
+    background-color: darken(color(primary), 2%);
+  }
+
+  &:active {
+    background-color: darken(color(primary), 3%);
+  }
+}
+
+/* ----------------- END 1. 컬러 ----------------- */
+
+
+/* ----------------- 2. 모양 ----------------- */
+
+.btn-rounded {
+  border-radius: 10px;
+}
+
+.btn-shadow {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.07);
+}
+
+.btn-full {
+  width: 100%;
+  height: 100%;
+}
+
+/* ----------------- END 2. 모양 ----------------- */
+
+
+/* ----------------- 3. 사이즈 (높이) ----------------- */
+
+.btn-md {
+  padding: 11px 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-sm {
+  padding: 7px 15px;
+  font-size: 16px;
+}
+
+/* ----------------- END 3. 사이즈 (높이) ----------------- */
+
+
+/* ----------------- 4. 사이즈 (너비) ----------------- */
+
+.btn-full {
+  width: 100%;
+}
+
+/* ----------------- END 4. 사이즈 (너비) ----------------- */
+
+
+
+// 체크박스 버튼
+.check-txt-link-grp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .link-grp {
+
+    .link {
+      @include input-reset;
+
+      font-size: rem(12);
+      font-weight: 500;
+      color: color(primary);
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: #39C3C5;
+      }
+    }
+  }
+}
+
+.check-txt-grp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  .check-onoff-txt {
+    cursor: pointer;
+    font-size: rem(15);
+    font-weight: 500;
+    color: color(text);
+    opacity: 0.6;
+  }
+}
+
+.check-onoff {
+  // 구성요소: 체크박스 스타일
+  @include bg-op($s: 16px, $p: 50% 50%);
+
+  background-color: #FAFAFA;
+  border: 1px solid #E4E4E4;
+  border-radius: 5px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex-basis: 22px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.234' height='12.612' viewBox='0 0 16.234 12.612'%3E%3Cpath id='icon-check-gr' d='M-17479.656-7783.813l4.309,4.736,7.691-9' transform='translate(17481.775 7790.189)' fill='none' stroke='%23e4e4e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/svg%3E%0A");
+  transition: all 0.2s;
+  cursor: pointer;
+
+  @at-root .check-switch:checked+& {
+    background-color: #39C3C5;
+    border-color: #39C3C5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.234' height='12.612' viewBox='0 0 16.234 12.612'%3E%3Cpath id='icon-check-gr' d='M-17479.656-7783.813l4.309,4.736,7.691-9' transform='translate(17481.775 7790.189)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/svg%3E%0A");
+  }
+
+  &.type-square {
+    border-radius: 50%;
+    background-size: 12px 10px;
+  }
+}
+
+
+// 토글 버튼
+.toggle-onoff {
+  // 구성요소: 토글 스타일
+  background-color: #DBDBDB;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  @include make-before {
+    @include circle(22px);
+
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s;
+  }
+
+  @at-root .toggle-switch:checked+& {
+    background-color: color(primary);
+
+    &:before {
+      left: calc(100% - 24px);
+    }
+  }
+}

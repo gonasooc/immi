@@ -1,0 +1,14 @@
+/* =================== icon =================== */
+.icon {
+  @include bg-op($s: contain, $p: center);
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// 아이콘별 지정(url 연결, 크기 지정)
+// .icon-example {
+//   @include bg-url(icon,'icon_example.svg');
+//   width: 20px;
+//   height: 20px;
+// }

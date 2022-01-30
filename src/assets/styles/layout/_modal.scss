@@ -1,0 +1,91 @@
+/* =================== modal =================== */
+// cover modal
+.modal {
+  @include full;
+
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  overscroll-behavior: contain;
+}
+
+.modal-bg {
+  height: 110%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 724px;
+  width: 88%;
+  transform: translate(-50%, -50%);
+
+  @include mobile {
+    height: 95vh;
+  }
+}
+
+.modal-ttl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding-left: 27px;
+  background-color: color(primary);
+
+  @include mobile {
+    padding-left: 14px;
+  }
+
+  .ttl {
+    @include flex-center;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .txt {
+    font-size: rem(22);
+    font-weight: 600;
+    color: white;
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  .btn-close {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-close {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.modal-conts {
+  height: 86vh;
+  max-height: 500px;
+  background-color: #ebebeb;
+
+  .white-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 42px;
+    background-color: white;
+
+    @include mobile {
+      display: block;
+      padding: 12px 15px;
+    }
+  }
+}
