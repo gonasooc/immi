@@ -41,14 +41,35 @@ const routes = [
         component: index,
         meta: { requiresResetScrollHeight: true },
     },
-    /* ====================== company ====================== */
-    // 공지사항
-    // {
-    //     path: '/notice',
-    //     name: 'Notice',
-    //     component: () => import('~@/views/company/Notice'),
-    //     meta: { requiresResetScrollHeight: true },
-    // },
+    /* ====================== auth ====================== */
+    // 로그인
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import('~@/views/auth/Login'),
+        meta: { requiresResetScrollHeight: true },
+    },
+    // 아이디 찾기
+    {
+        path: '/find-id',
+        name: 'FindId',
+        component: () => import('~@/views/auth/FindId'),
+        meta: { requiresResetScrollHeight: true },
+    },
+    // 비밀번호 찾기
+    {
+        path: '/find-pw',
+        name: 'FindPw',
+        component: () => import('~@/views/auth/FindId'),
+        meta: { requiresResetScrollHeight: true },
+    },
+    // 요소 모음
+    {
+        path: '/components',
+        name: 'Components',
+        component: () => import('~@/views/util/Components'),
+        meta: { requiresResetScrollHeight: true },
+    },
 ];
 
 const router = new VueRouter({

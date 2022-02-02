@@ -4,3 +4,21 @@
 textarea {
   resize: none;
 }
+
+.page-container {
+  min-height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.panel {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.narrow-panel {
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -2,9 +2,7 @@
   "folders": [
     {
       "path": ".",
-      "exclude": [
-        "node_modules"
-      ]
+      "exclude": ["node_modules"]
     }
   ],
   "settings": {
@@ -13,10 +11,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "eslint.validate": [
-      "javascript",
-      "vue"
-    ],
+    "eslint.validate": ["javascript", "vue"],
     "eslint.format.enable": true,
     "eslint.alwaysShowStatus": true,
     "eslint.lintTask.enable": true,
@@ -27,15 +22,11 @@
     "vetur.format.defaultFormatter.css": "prettier",
     "vetur.format.defaultFormatter.scss": "prettier",
     "vetur.format.options.tabSize": 2,
-    "vetur.format.options.useTabs": false,
     "vetur.completion.autoImport": false,
     "git.autorefresh": true,
     "files.eol": "\r\n",
     // live sass compiler setting
-    "liveSassCompile.settings.autoprefix": [
-      "> 1%",
-      "last 2 versions"
-    ],
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
     "liveSassCompile.settings.formats": [
       {
         "format": "expanded",
