@@ -8,7 +8,7 @@
       <router-view />
     </keep-alive>
 
-    <tooltip-dialog />
+    <!-- <tooltip-dialog /> -->
     <confirm-dialog />
     <alert-dialog />
   </div>
@@ -21,5 +21,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~@/assets/styles/ui.scss';
+@import "~@/assets/styles/ui.scss";
 </style>
