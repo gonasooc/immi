@@ -9,8 +9,11 @@
           <h2 class="main-ttl">
             Comprehensive Ranking System (CRS) tool: skilled immigrants (Express Entry)
           </h2>
+          <p style="font-size: 20px; font-weight: 500; color: red; margin-bottom: 30px;">
+            합계: {{ sumValue() }}
+          </p>
           <!-- section-main-info -->
-          <div class="section-main-info">
+          <!-- <div class="section-main-info">
             <p class="section-dec">
               This tool will help you calculate your Comprehensive Ranking System (CRS) score based on the answers you provide below. The CRS is a points-based system that we use to assess and score your profile and rank it in the Express Entry pool. It’s used to assess your:
             </p>
@@ -31,15 +34,15 @@
                 <span class="section-info-txt">other factors</span>
               </li>
             </ul>
-          </div>
+          </div> -->
           <!-- END section-main-info -->
           
           <!-- section-select -->
           <div class="section-select">
-            <h3 class="section-ttl">
+            <!-- <h3 class="section-ttl">
               Use this tool if:
-            </h3>
-            <ul class="section-list-grp">
+            </h3> -->
+            <!-- <ul class="section-list-grp">
               <li class="section-info-list">
                 <span class="section-info-txt">you’re eligible for at least 1 Express Entry program</span>
               </li>
@@ -49,7 +52,7 @@
               <li class="section-info-list">
                 <span class="section-info-txt">you were invited to apply for permanent residence, and want to see if a change to your profile may affect your CRS score</span>
               </li>
-            </ul>
+            </ul> -->
             <!-- select-all-wrap -->
             <div class="select-all-wrap">
               <!-- label + input -->
@@ -453,6 +456,11 @@ export default {
             q3_b: { value: 0, nextId: 'vacant' },
             q4: { value: 0, nextId: 'vacant' },
         };
+    },
+    methods: {
+        sumValue() {
+            return this.q1.value + this.q2.value + this.q2_2.value + this.q3.value + this.q3_b.value + this.q4.value;
+        },
     },
 };
 
