@@ -150,7 +150,9 @@ export default {
         },
     },
 };
-
+// 1. 데이터 모델 만들 때 array or object 차이가 있는지
+// 2. answers, selectedQuestions에 어떤 형식으로 값을 넣어주고 onChange 메소드의 event를 어떤 형식으로 활용하는지
+// 3. onChange 메소드 안에 내용 한번 더 설명 부탁
 </script>
 
 
