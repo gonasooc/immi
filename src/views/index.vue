@@ -151,8 +151,9 @@ export default {
     },
 };
 // 1. 데이터 모델 만들 때 array or object 차이가 있는지
+// - 큰 차이 없지만 성능 이슈를 생각했을 때, 그리고 순서가 중요하지 않은 데이터 모델이면 object key value로 짜는 게 나을 듯
 // 2. answers, selectedQuestions에 어떤 형식으로 값을 넣어주고 onChange 메소드의 event를 어떤 형식으로 활용하는지
-// 3. onChange 메소드 안에 내용 한번 더 설명 부탁
+// - 해당 값에 새로운 key를 할당함으로서 데이터 구축(console.log로 확인해보기 or dummy array 선언해서 확인)
 </script>
 
 
